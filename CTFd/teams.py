@@ -163,6 +163,7 @@ def private():
 
 
 @teams.route("/teams/<int:team_id>")
+@authed_only
 @check_account_visibility
 @check_score_visibility
 @require_team_mode
